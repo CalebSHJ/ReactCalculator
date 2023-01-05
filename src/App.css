@@ -1,38 +1,64 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-top: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.container {
+  /* border: 3px solid rgb(209, 153, 12); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "dis dis dis dis"
+  "AC back div mul"
+  "seven eight nine minus"
+  "four five six plus"
+  "one two three equal"
+  "zero zero dot equal";
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(150, 119, 86);
+  padding: 20px 30px;
+  color: cornsilk;
+  border: 1px solid rgb(142, 96, 62);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dis {
+  grid-area: dis;
+  background-color: rgb(81, 78, 71);
+  font-size: 20px;
+  text-align: right;
   color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.zero {
+  grid-area: zero;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.equal {
+  grid-area: equal;
 }
+
+.AC, .back {
+  background-color: rgb(168, 59, 40);
+}
+
+.equal {
+  background-color: rgb(33, 117, 117);
+}
+
+.sym {
+  background-color: rgb(163, 101, 39);
+}
+
+
+
