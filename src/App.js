@@ -1,6 +1,5 @@
 import './App.css';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 
 function App() {
@@ -92,49 +91,6 @@ function App() {
     setResult("0");
   }
 
-  useEffect(() => {
-    document.addEventListener('keydown', detectKeyDown, true)
-  });
-
-  const detectKeyDown = (e) => {
-    const key = e.key;
-    // const keyInt = parseInt(key);
-    if(key === "Escape") {
-      setProgress("");
-      setDisplay("0");
-      setResult("0");
-    } else if(key === "Backspace") {
-      setProgress(progress
-        .split("")
-        .slice(0, progress.length - 1)
-        .join("")
-      );
-      setDisplay(display
-        .split("")
-        .slice(0, display.length - 1)
-        .join("")
-      );
-    } 
-    // else if(typeof parseInt(key) === 'number') {
-    //   if(display === '0') {
-    //     setDisplay("");
-    //     setProgress("");
-    //     setProgress(progress + key);
-    //     setDisplay(display + key);
-    //   } else {
-    //     setProgress(progress + key);
-    //     setDisplay(display + key);
-    //   }
-
-    //   if(/[=]$/.test(progress)) {   
-    //     setProgress('')
-    //     setProgress(progress + key)
-    //     setDisplay(key);
-    // } else if(/[-*/+]$/.test(progress)) {
-    //   setDisplay(key);
-    // } 
-    // }
-  }
 
   return (
     <div className="App">
@@ -162,6 +118,7 @@ function App() {
         <div className="button zero" id="zero" onClick={displayNumberHandle}>0</div>
         <div className="button dot" id="decimal" onClick={decimalHandle}>.</div>
       </div>
+      <a href='https://github.com/CalebSHJ/ReactCalculator'>Go to check codes</a>
     </div>
   );
 }

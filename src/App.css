@@ -1,12 +1,14 @@
 .App {
   margin-top: 20vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .container {
   /* border: 3px solid rgb(209, 153, 12); */
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -58,6 +60,11 @@
 
 .sym {
   background-color: rgb(163, 101, 39);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(47, 12, 19);
 }
 
 
